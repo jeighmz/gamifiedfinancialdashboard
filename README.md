@@ -1,61 +1,23 @@
-# gamifiedfinancialdashboard
-
 # CoingeckoAPI-Crypto-Dash
 
-Welcome to **CoingeckoAPI-Crypto-Dash**, a React dashboard aimed at making financial tracking for cryptocurrency easier and more intuitive.
+## Dashboard
 
-
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
-4. [Dependencies](#dependencies)
-
-## Introduction
-
-This dashboard project is built using React.js and is designed to provide a comprehensive snapshot of your cryptocurrency financial metrics. Using all open-source tools, and OpenAI for LLM. 
+- **Name**: `coingeckoapi-crypto-dash`
 
 ## Features
 
-- **Real-time Data**: Fetch real-time financial data using the Coingecko API.
-- **Asset Allocation**: View your asset allocation in intuitive pie charts and bar graphs.
-- **Mobile Responsive**: Designed to work seamlessly on both desktop and mobile.
-- **Pepe Meme Lord**: Provided you input an OpenAI api key to the react environment, you have GPT-3.5-turbo trained to be a chill crypto degen. 
+- Real-time Data
+- Asset Allocation
+- Pepe Meme Lord LLM Bot
+- Mobile Responsive
 
-## Getting Started
+## Tools
 
-Clone the repository and move to the directory:
+### Coingecko API
+- **URL**: [Coingecko API Documentation](https://www.coingecko.com/api/documentation)
 
-\`\`\`bash
-git clone https://github.com/yourusername/coingeckoapi-crypto-dash.git
-cd coingeckoapi-crypto-dash
-\`\`\`
-
-### Prerequisites
-
-Make sure you have Node.js and npm installed:
-
-\`\`\`bash
-node --version
-npm --version
-\`\`\`
-
-### Installation
-
-Install the dependencies:
-
-\`\`\`bash
-npm install
-\`\`\`
-
-Start the React development server:
-
-\`\`\`bash
-npm start
-\`\`\`
-
-The project should be running at \`http://localhost:3000/\`.
+### React.js
+- **URL**: [React.js Documentation](https://reactjs.org/docs/getting-started.html)
 
 ## Dependencies
 
