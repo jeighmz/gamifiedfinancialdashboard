@@ -138,7 +138,7 @@ class CryptoDashboard extends Component {
           </div>
         </div>
 
-        <div style={{width:"100%"}}>
+        <div style={{width:window.innerWidth}}>
           {this.state.cryptoData
             .sort((a, b) => (b.current * b.price) - (a.current * a.price))
             .map((item, index) => (
