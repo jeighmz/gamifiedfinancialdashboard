@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import Chatbot from './Chatbot.js'
-import CryptoDashboard from './cryptodash';
+import Chatbot from './components/openai-llm-chatbot.js';
+import CryptoDashboard from './components/crypto-dashboard';
 
 function App() {
   return (

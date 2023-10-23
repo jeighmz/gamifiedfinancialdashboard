@@ -63,7 +63,7 @@ class CryptoDashboard extends Component {
 
   render() {
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF00FF', '#00FFFF', '#800080'];
-// Add more colors as needed
+    // Add more colors as needed
 
     let total = 0;
     for (let i = 0; i < this.state.cryptoData.length; i++) {
@@ -89,17 +89,17 @@ class CryptoDashboard extends Component {
 
 
     return (
-      
-      <div style={{padding:'25px', maxWidth:'800px'}}>
+
+      <div style={{ padding: '25px', maxWidth: '800px' }}>
         <div id='totalCrypto' style={{ height: '50px' }}>
           {this.state.showTotal && <h2 className="portfolio-counter">
             ≅${total.toFixed(2)}USD
           </h2>}
         </div>
-        <div style={{position:'absolute', top:'25px', right:'20vw'}}>
+        <div style={{ position: 'absolute', top: '10px', right: '25px' }}>
           <Switch onChange={this.handleSwitchChange} />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'row', width: '700px', backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', width: '100%', backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
 
           <PieChart width={300} height={300} style={{ position: 'relative', top: '0px', backgroundColor: 'white' }}>
             <Pie
@@ -138,20 +138,22 @@ class CryptoDashboard extends Component {
           </div>
         </div>
 
+        <div style={{width:"100%"}}>
+          {this.state.cryptoData
+            .sort((a, b) => (b.current * b.price) - (a.current * a.price))
+            .map((item, index) => (
+              <Crypto
+                key={index}
+                t={item.t}
+                f={item.f}
+                s={item.s}
+                current={item.current}
+                price={item.price}
+                total={total}
+              />
+            ))}
+        </div>
 
-        {this.state.cryptoData
-          .sort((a, b) => (b.current * b.price) - (a.current * a.price))
-          .map((item, index) => (
-            <Crypto
-              key={index}
-              t={item.t}
-              f={item.f}
-              s={item.s}
-              current={item.current}
-              price={item.price}
-              total={total}
-            />
-          ))}
       </div>
     );
   }

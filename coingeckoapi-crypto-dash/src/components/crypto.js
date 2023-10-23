@@ -32,13 +32,13 @@ export default ({ t, f, s, current, price, total }) => {
     return (
         <React.Fragment>
             <div style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%' }}>
-                <header style={{ backgroundColor: 'white', position: 'relative', textAlign: 'left', padding: '4px', width: '40%' }}
+                <header style={{ backgroundColor: 'white', position: 'relative', textAlign: 'left', padding: '4px', width: window.innerWidth * 0.4, maxWidth:'100px' }}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <div className={`logo-container ${isHovered ? 'hidden' : ''}`}>
                    
-                        <img src={getImage(s)} style={{ width: '50px', height: '50px', position: 'absolute', top: '50%', right: '50px', transform: 'translateY(-50%)' }} />
+                        <img src={getImage(s)} style={{ width: '40px', height: '40px', position: 'absolute', top: '50%', right: '50px', transform: 'translateY(-50%)' }} />
                     </div>
                     <div className={`content-container ${isHovered ? '' : 'hidden'}`}>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -64,7 +64,7 @@ export default ({ t, f, s, current, price, total }) => {
                                         </p>
                                         <p style={{
                                             fontWeight: '300',
-                                            fontSize: '16px',
+                                            fontSize: '14px',
                                             color: '#333333',
                                             fontFamily: 'Open Sans, sans-serif',
                                             margin: '5px 0px 0px',
@@ -79,11 +79,11 @@ export default ({ t, f, s, current, price, total }) => {
                             </FormGroup>
                         </div>
                     </div>
-
                 </header>
-                <div style={{ backgroundColor: 'lightblue', height: "100%", width: '100%', overflowY: 'auto' }}>
+
+                <div style={{ backgroundColor: 'transparent', height: "100%", width: '100%', overflowY: 'auto' }}>
                     <LinearProgress variant='buffer' value={totalPrice / total * 100} valueBuffer={totalPrice / total} style={{ height: '6px' }} />
-                    <div className={isSwitchOn ? 'sliding-content active' : 'sliding-content'} style={{ backgroundColor: 'lightblue' }}>
+                    <div className={isSwitchOn ? 'sliding-content active' : 'sliding-content'} style={{ backgroundColor: 'transparent' }}>
                         {isSwitchOn ? (<Graph id={f} />) : null}
                     </div>
                 </div>

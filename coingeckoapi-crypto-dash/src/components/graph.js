@@ -1,7 +1,6 @@
 // graphtest.js
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { Card } from '@mui/material';
 
 const GraphTest = (id) => {
     id = id.id;
@@ -23,10 +22,10 @@ const GraphTest = (id) => {
     const dataMin = Math.min(...chartData.map(item => item.value));
     const dataMax = Math.max(...chartData.map(item => item.value));
     return (
-        <Card style={{ position: 'relative', width: '100%', top:'0px', boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset' }}>
+        <div style={{ position: 'relative', width: '100%', top:'0px', boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset' }}>
             <div style={{ position: 'relative', width: '100%'}}>
                 <LineChart
-                    width={495}
+                    width={window.innerWidth*0.7}
                     height={150}
                     data={chartData}
                     margin={{ top: 25, right: 0, left: 0, bottom: 5 }}
@@ -37,7 +36,7 @@ const GraphTest = (id) => {
                     <Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{ r: 8 }} />
                 </LineChart>
             </div>
-        </Card>
+        </div>
     );
 };
 
